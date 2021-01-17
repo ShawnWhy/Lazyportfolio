@@ -1,0 +1,127 @@
+.all-container{
+    position:relative;
+    width:44.8%;
+    height:300%;
+    background-color:black;
+    z-index:0;
+    margin:auto;
+    overflow: hidden;
+    text-align:center;
+}
+.headcontainer{
+    height:47%;
+    position:absolute;
+    width:100%;
+    z-index:1;
+    background-color:white;
+   
+
+}
+.bead{
+    height:100%;
+    width:100%;
+    border-radius:4px;
+    transform:scale(.2) rotate(45deg);
+    transform-origin:center;
+    background-color:goldenrod;
+    margin:auto;
+}
+.beadroll{
+    transform-origin:center;
+    animation:beadroll .3s both ease;
+}
+.beadroll:hover{
+    height:50px;
+    width:50px;
+    
+    position:relative;
+    bottom:5px;
+    z-index:2;
+}
+@keyframes beadroll{
+    0%{    transform:scale(.2) rotate(45deg);
+    }
+    100%{ transform:scale(1) rotate(0);
+    }
+}
+.bead-container{
+    height:40px;
+    width:40px;
+    float:left;
+    margin:auto;
+}
+.tail{
+    position:absolute;
+    height:50px;
+    width:50px;
+    z-index:3;
+    border-radius:4px;
+    background-color:blue;
+
+
+}
+
+.bigTail{
+    z-index:4
+}
+
+.decorate{
+    position:fixed;
+    height:80px;
+    width:80px;
+    background-color:hotpink;
+    top:80%;
+    right:10%;
+    text-align:center;
+    font-family:arial;
+    font-weight:bold;
+    border-radius:25%;
+    z-index:3
+
+
+}
+.instructions{
+    position:fixed;
+    width:100px;
+    top:50%;
+    right:8%;
+    z-index:3
+}
+
+.decorate p{
+    margin:auto;
+    position:relative;
+    top:30%;
+
+}
+
+.decorate:hover{
+    background-color:darkcyan;  
+}
+
+.curtain{
+    height:100%;
+    width:300%;
+    position:fixed;
+    z-index:2;
+    background-color:blue;
+}
+
+.stripe{
+    width:.4%;
+    height:100%;
+    animation:stripe .5s both ease;
+    position:relative;
+    z-index:2;
+    float:left;
+}
+
+@keyframes stripe{
+    0%{transform:translateY(-100%)}
+    50%{transform:translateY(-50%)}
+   100%{transform:translateY(0%)}
+}
+
+.invisibleP{
+    display:none;
+}
