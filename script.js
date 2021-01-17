@@ -99,16 +99,20 @@ document.addEventListener("DOMContentLoaded", function(){
       lazyloadThrottleTimeout = setTimeout(function(){
         let scrollTop = window.pageYOffset;
         lazyloadImages.forEach(function(img){
-          if(img.offsetTop < (window.innerHeight/2 + scrollTop)&&img.offsetTop>(window.innerHeight/2 + scrollTop)-40) {
+          if(img.offsetTop < (window.innerHeight/2 + scrollTop)
+        //   &&img.offsetTop>(window.innerHeight/2 + scrollTop)-40
+        ){
             // $(smallDiv).attr('style', 'background-color:'+color);
             var letters = '0123456789ABCDEF';
             var color = '#';
             for (var j = 0; j < 6; j++) {
             color += letters[Math.floor(Math.random() * 16)]}
             img.setAttribute('style', 'background-color:'+color);
+            img.classList.remove('beadrollNeg')
             img.classList.add('beadroll')
           }
            else{img.classList.remove('beadroll')
+           img.classList.add('beadrollNeg')
           }
         });
         // if(lazyloadImages.length == 0) {
